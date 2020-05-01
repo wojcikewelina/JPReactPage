@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import './App.css';
 
 import NavigationBar from './components/navigationBar';
@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <BrowserRouter>
+        <HashRouter>
           <NavigationBar />
           <Switch>
             <Route exact path="/" component={HomePage} />
@@ -21,7 +21,7 @@ class App extends Component {
             <Route path="/oze" component={OzePage} />
             <Route path="/pone" component={PonePage} />
           </Switch>
-        </BrowserRouter>
+        </HashRouter>
       </div>
     );
   }
